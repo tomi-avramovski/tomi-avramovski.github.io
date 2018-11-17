@@ -296,9 +296,6 @@ ul {
     center center no-repeat;
   background-size: cover;
 }
-div {
-  border: 1px solid red;
-}
 .our-mission {
   margin-top: 4%;
   background: url(images/mission.png) no-repeat;
