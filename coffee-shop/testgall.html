@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style type="text/css">
+      #container_gall {
+        position:relative;
+        width:550px;
+        height:550px;
+        overflow:hidden;
+      }
+	  .bob {
+		position:fixed;
+	  }
+    </style>
+  </head>
+  <body>
+    <div id="container_gall">
+      <img class="bob" id="1" alt="Click to zoom" src="images/a.png" width="250" style="left:50; top:50" />
+	  <img class="bob" id="2" alt="Click to zoom" src="images/b.png" width="250" style="left:305; top:50" />
+	  <img class="bob" id="3" alt="Click to zoom" src="images/c.png" width="250" style="left:560; top:50" />
+    </div>
+    <script type="text/javascript">
+		var imgid;
+		var origH  = 0;  
+        var origW  = 0; 
+      function resizeImg (event)
+      {
+        if(origH>0){
+			img = document.getElementById(imgid);
+			img.height = origH;
+			img.width  = origW;
+			img.style.zIndex = "0";
+			img.style.left = parseInt(img.style.left)+10;
+			img.style.top = parseInt(img.style.top)+10;
+			
+		}
+		img=this;
+		imgid=img.id;
+		var resize = 120; // procenti
+		origH  = img.height;  
+        origW  = img.width; 
+        var mouseX = event.x;
+        var mouseY = event.y;
+        var newH   = origH * (resize / 100);
+        var newW   = origW * (resize / 100);
+
+        // resize vo newH i newW
+        img.height = newH;
+        img.width  = newW;
+		img.style.zIndex = "1";
+		img.style.left = parseInt(img.style.left)-10;
+		img.style.top = parseInt(img.style.top)-10;
+        /*var c = img.parentNode;
+
+        // centriraj
+        c.scrollLeft = (mouseX * (resize / 100)) - (newW / 2) / 2;
+        c.scrollTop  = (mouseY * (resize / 100)) - (newH / 2) / 2;*/
+      }
+	  //el = document.getElementsByClassName("bob");
+	  document.getElementById(1).addEventListener("click", resizeImg);
+	  document.getElementById(2).addEventListener("click", resizeImg);
+	  document.getElementById(3).addEventListener("click", resizeImg);
+    </script>	
+  </body>
+</html>
