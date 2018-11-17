@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Match the Word</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="reseter.css">
+</head>
+<body>
+	<div class="headerDash">
+		<div class="headerDashWrap">		
+		<div class="logoDashboard">
+			<img src="images/logo.png" alt="">
+			
+		</div>
+		
+		
+	
+	
+		<div class="avatarDash">
+			<a href="#">
+			<img src="images/userIcon.png" alt="">
+			</a>
+			<span>Hello, Thomas!</span>
+			<div class="dropdown">
+				
+					<i onclick="myFunction()" class="dropbtn fas fa-sort-down"></i>
+					  <div id="myDropdown" class="dropdown-content">
+						  <div class="dashStatus">
+						<a href="#home">Status: Online</a>
+							</div>
+							<div class="dashAcc">
+						<a href="#">Account Setting</a>
+					</div>
+					<div class="dashFeedback">
+						<a href="#">Feedback</a>
+					</div>
+					<div class="dashLog">
+						<a href="#">Log Out</a>
+					</div>
+					  </div>
+					</div>
+
+		</div>
+	</div>
+	
+	</div>
+		<div class="wordContent">
+			<div class="wordTop">
+				<div class="wordRect"></div>
+				<div class="wordRect"></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<h2>Match the word with the correct gramatical order</h2>
+			<div class="matchWordContent">
+				<div class="topMatch">
+				<div class="wordPos">la</div>
+				<div class="wordPos">le</div>
+				<div class="wordPos">pouvoir</div>
+			</div>
+			<div class="midMatch">
+				<div class="wordPos">le</div>
+				<div class="wordPos">fille</div>
+				<div class="wordPos">la</div>
+			</div>
+			<div class="botMatch">
+				<div class="wordPos">pomme</div>
+				<div class="wordPos">jus</div>
+				<div class="wordPos">blank</div>
+			</div>
+			</div>
+			<div class="wordButtons">
+					<button id="wordButStyle">Skip</button>
+					<button id="wordButStyle">Check</button>
+				</div>
+		</div>
+		
+		<div class="footerLog">
+				<span>® Infinity - All rights reserved</span>
+			</div>
+	
+			
+
+			<script>
+					
+					function myFunction() {
+						document.getElementById("myDropdown").classList.toggle("show");
+					}
+					
+					
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+					
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
+					}
+					</script>
+</body>
+</html>

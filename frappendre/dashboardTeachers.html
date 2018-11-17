@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Teachers - Frapprendre</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="reseter.css">
+</head>
+<body>
+	<div class="headerDash">
+		<div class="headerDashWrap">		
+		<div class="logoDashboard">
+			<img src="images/logoDash.png" alt="">
+			
+		</div>
+		
+		
+	
+		<div class="navDash">
+			
+			<li>Dashboard</li>
+			<li>Most recent exams</li>
+			<li>Previous exams</li>
+			<li>Teachers</li>
+			<li>More</li>
+			  
+		
+		</div>
+		<div class="avatarDash">
+			<a href="#">
+			<img src="images/userIcon.png" alt="">
+			</a>
+			<span>Hello, Thomas!</span>
+			<div class="dropdown">
+				
+					<i onclick="myFunction()" class="dropbtn fas fa-sort-down"></i>
+					  <div id="myDropdown" class="dropdown-content">
+						  <div class="dashStatus">
+						<a href="#home">Status: Online</a>
+							</div>
+							<div class="dashAcc">
+						<a href="#">Account Setting</a>
+					</div>
+					<div class="dashFeedback">
+						<a href="#">Feedback</a>
+					</div>
+					<div class="dashLog">
+						<a href="#">Log Out</a>
+					</div>
+					  </div>
+					</div>
+
+		</div>
+	</div>
+	
+	</div>
+	<div class="teacherSearch">
+		<input type="search" placeholder="Search Teacher...">
+	</div>
+	<div class="teacherContent">
+		
+	</div>
+
+		<div class="footerLog">
+				<span>® Infinity - All rights reserved</span>
+			</div>
+	
+			
+
+			<script>
+					
+					function myFunction() {
+						document.getElementById("myDropdown").classList.toggle("show");
+					}
+					
+					
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+					
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
+					}
+					</script>
+</body>
+</html>
