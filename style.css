@@ -39,6 +39,10 @@ h1 {
     left:10%;
     
 }
+.elements-img li a {
+  color: #fff;
+  text-decoration: none;
+}
 
 
 .bg-img img.logo {
